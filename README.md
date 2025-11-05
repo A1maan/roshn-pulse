@@ -107,5 +107,5 @@ This project is distributed under the MIT License. See `LICENSE` for details.
 
 ---
 
-Crafted for the ROSHN Hackathon with energy, elegance, and a pulse on the jobsite. 🚀
+Crafted for the ROSHN Hackathon.
 
