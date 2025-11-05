@@ -1,0 +1,37 @@
+{
+  "version": "1.0.0",
+  "generated_at_utc": "2025-11-04T15:49:20.391757+00:00",
+  "description": "Feature schema for ROSHN Brain (component-calibrated planning model). Order is the model's required input vector order.",
+  "features": [
+    {
+      "name": "resource",
+      "dtype": "float",
+      "impute": "0.0",
+      "description": "Composite of standardized Labor_Hours, Equipment_Utilization, Material_Usage"
+    },
+    {
+      "name": "site_env",
+      "dtype": "float",
+      "impute": "0.0",
+      "description": "Composite of standardized Temperature, Humidity, Air_Quality_Index"
+    },
+    {
+      "name": "schedule",
+      "dtype": "float",
+      "impute": "0.0",
+      "description": "Standardized Planned_Duration + coarse seasonality term from Start_Date month"
+    },
+    {
+      "name": "cost",
+      "dtype": "float",
+      "impute": "0.0",
+      "description": "Standardized Planned_Cost/Planned_Duration"
+    }
+  ],
+  "target": {
+    "name": "Is_Delayed",
+    "type": "binary",
+    "positive_class": 1,
+    "definition": "(Actual_Duration / Planned_Duration - 1.0) > 0.15"
+  }
+}

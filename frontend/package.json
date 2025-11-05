@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@mesh-gradient/core": "^1.5.0"
+  }
+}
